@@ -1,0 +1,12 @@
+category: Graphics OCaml
+requires: cygwin libXpm4 libfreetype26 libgif4 libjpeg62 libpng12 libtiff5 ocaml ocaml-lablgl ocaml-lablgtk2
+sdesc: "OCaml image processing libraries"
+ldesc: "CamlImages is an image processing library for OCaml, which provides:
+
+* Basic functions for image processing and loading/saving various image
+  file formats (hence providing a translation facility from format to
+  format),
+* An interface with the Caml graphics library allows to display
+  images in the Graphics module screen and to mix them with Caml drawings,
+* A freetype interface, integrated into the library: you can draw texts
+  into images using any truetype fonts."

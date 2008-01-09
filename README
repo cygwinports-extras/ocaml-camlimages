@@ -1,0 +1,362 @@
+ocaml-camlimages
+------------------------------------------
+CamlImages is an image processing library for OCaml, which provides:
+
+* Basic functions for image processing and loading/saving various image 
+  file formats (hence providing a translation facility from format to 
+  format),
+* An interface with the Caml graphics library allows to display 
+  images in the Graphics module screen and to mix them with Caml drawings, 
+* A freetype interface, integrated into the library: you can draw texts 
+  into images using any truetype fonts.
+
+Runtime requirements:
+  cygwin-1.5.25-7
+  libXpm4-3.5.7-1
+  libfreetype26-2.3.5-1
+  libgif4-4.1.6-1
+  libjpeg62-6b-12
+  libpng12-1.2.24-1
+  libtiff5-3.8.2-3
+  ocaml-3.10.0-1
+  ocaml-lablgl-1.03-1
+  ocaml-lablgtk2-2.10.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.25-7
+  binutils-20060817-1
+  cygport-0.3.8-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://pauillac.inria.fr/camlimages/
+
+Canonical download:
+  ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-camlimages-2.2.0-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-camlimages-2.2.0-X.cygport all
+
+This will create:
+  /usr/src/ocaml-camlimages-2.2.0-X-src.tar.bz2
+  /usr/src/ocaml-camlimages-2.2.0-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/3.10/camlimages/Makefile.config
+  /usr/lib/ocaml/3.10/camlimages/bitmap.cmi
+  /usr/lib/ocaml/3.10/camlimages/bitmap.cmo
+  /usr/lib/ocaml/3.10/camlimages/bitmap.cmx
+  /usr/lib/ocaml/3.10/camlimages/bitmap.mli
+  /usr/lib/ocaml/3.10/camlimages/bitmap.o
+  /usr/lib/ocaml/3.10/camlimages/blend.cmi
+  /usr/lib/ocaml/3.10/camlimages/blend.cmo
+  /usr/lib/ocaml/3.10/camlimages/blend.cmx
+  /usr/lib/ocaml/3.10/camlimages/blend.mli
+  /usr/lib/ocaml/3.10/camlimages/blend.o
+  /usr/lib/ocaml/3.10/camlimages/bmp.cmi
+  /usr/lib/ocaml/3.10/camlimages/bmp.cmo
+  /usr/lib/ocaml/3.10/camlimages/bmp.cmx
+  /usr/lib/ocaml/3.10/camlimages/bmp.mli
+  /usr/lib/ocaml/3.10/camlimages/bmp.o
+  /usr/lib/ocaml/3.10/camlimages/camlimages.cmi
+  /usr/lib/ocaml/3.10/camlimages/camlimages.cmo
+  /usr/lib/ocaml/3.10/camlimages/camlimages.cmx
+  /usr/lib/ocaml/3.10/camlimages/camlimages.o
+  /usr/lib/ocaml/3.10/camlimages/ci_bmp.a
+  /usr/lib/ocaml/3.10/camlimages/ci_bmp.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_bmp.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_core.a
+  /usr/lib/ocaml/3.10/camlimages/ci_core.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_core.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_freetype.a
+  /usr/lib/ocaml/3.10/camlimages/ci_freetype.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_freetype.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_gif.a
+  /usr/lib/ocaml/3.10/camlimages/ci_gif.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_gif.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_graphics.a
+  /usr/lib/ocaml/3.10/camlimages/ci_graphics.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_graphics.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_jpeg.a
+  /usr/lib/ocaml/3.10/camlimages/ci_jpeg.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_jpeg.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_lablgtk2.a
+  /usr/lib/ocaml/3.10/camlimages/ci_lablgtk2.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_lablgtk2.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_png.a
+  /usr/lib/ocaml/3.10/camlimages/ci_png.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_png.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_ppm.a
+  /usr/lib/ocaml/3.10/camlimages/ci_ppm.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_ppm.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_ps.a
+  /usr/lib/ocaml/3.10/camlimages/ci_ps.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_ps.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_tiff.a
+  /usr/lib/ocaml/3.10/camlimages/ci_tiff.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_tiff.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_xpm.a
+  /usr/lib/ocaml/3.10/camlimages/ci_xpm.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_xpm.cmxa
+  /usr/lib/ocaml/3.10/camlimages/ci_xvthumb.a
+  /usr/lib/ocaml/3.10/camlimages/ci_xvthumb.cma
+  /usr/lib/ocaml/3.10/camlimages/ci_xvthumb.cmxa
+  /usr/lib/ocaml/3.10/camlimages/cmyk32.cmi
+  /usr/lib/ocaml/3.10/camlimages/cmyk32.cmo
+  /usr/lib/ocaml/3.10/camlimages/cmyk32.cmx
+  /usr/lib/ocaml/3.10/camlimages/cmyk32.mli
+  /usr/lib/ocaml/3.10/camlimages/cmyk32.o
+  /usr/lib/ocaml/3.10/camlimages/color.cmi
+  /usr/lib/ocaml/3.10/camlimages/color.cmo
+  /usr/lib/ocaml/3.10/camlimages/color.cmx
+  /usr/lib/ocaml/3.10/camlimages/color.mli
+  /usr/lib/ocaml/3.10/camlimages/color.o
+  /usr/lib/ocaml/3.10/camlimages/colorhist.cmi
+  /usr/lib/ocaml/3.10/camlimages/colorhist.cmo
+  /usr/lib/ocaml/3.10/camlimages/colorhist.cmx
+  /usr/lib/ocaml/3.10/camlimages/colorhist.o
+  /usr/lib/ocaml/3.10/camlimages/config.h
+  /usr/lib/ocaml/3.10/camlimages/freetype.cmi
+  /usr/lib/ocaml/3.10/camlimages/freetype.cmo
+  /usr/lib/ocaml/3.10/camlimages/freetype.cmx
+  /usr/lib/ocaml/3.10/camlimages/freetype.mli
+  /usr/lib/ocaml/3.10/camlimages/freetype.o
+  /usr/lib/ocaml/3.10/camlimages/ftintf.o
+  /usr/lib/ocaml/3.10/camlimages/ftlow.cmi
+  /usr/lib/ocaml/3.10/camlimages/ftlow.cmo
+  /usr/lib/ocaml/3.10/camlimages/ftlow.cmx
+  /usr/lib/ocaml/3.10/camlimages/ftlow.mli
+  /usr/lib/ocaml/3.10/camlimages/ftlow.o
+  /usr/lib/ocaml/3.10/camlimages/fttext.cmi
+  /usr/lib/ocaml/3.10/camlimages/fttext.cmo
+  /usr/lib/ocaml/3.10/camlimages/fttext.cmx
+  /usr/lib/ocaml/3.10/camlimages/fttext.mli
+  /usr/lib/ocaml/3.10/camlimages/fttext.o
+  /usr/lib/ocaml/3.10/camlimages/genimage.cmi
+  /usr/lib/ocaml/3.10/camlimages/genimage.cmo
+  /usr/lib/ocaml/3.10/camlimages/genimage.cmx
+  /usr/lib/ocaml/3.10/camlimages/genimage.mli
+  /usr/lib/ocaml/3.10/camlimages/genimage.o
+  /usr/lib/ocaml/3.10/camlimages/geometry.cmi
+  /usr/lib/ocaml/3.10/camlimages/geometry.cmo
+  /usr/lib/ocaml/3.10/camlimages/geometry.cmx
+  /usr/lib/ocaml/3.10/camlimages/geometry.o
+  /usr/lib/ocaml/3.10/camlimages/gif.cmi
+  /usr/lib/ocaml/3.10/camlimages/gif.cmo
+  /usr/lib/ocaml/3.10/camlimages/gif.cmx
+  /usr/lib/ocaml/3.10/camlimages/gif.mli
+  /usr/lib/ocaml/3.10/camlimages/gif.o
+  /usr/lib/ocaml/3.10/camlimages/gifread.o
+  /usr/lib/ocaml/3.10/camlimages/gifwrite.o
+  /usr/lib/ocaml/3.10/camlimages/graphic_image.cmi
+  /usr/lib/ocaml/3.10/camlimages/graphic_image.cmo
+  /usr/lib/ocaml/3.10/camlimages/graphic_image.cmx
+  /usr/lib/ocaml/3.10/camlimages/graphic_image.mli
+  /usr/lib/ocaml/3.10/camlimages/graphic_image.o
+  /usr/lib/ocaml/3.10/camlimages/images.cmi
+  /usr/lib/ocaml/3.10/camlimages/images.cmo
+  /usr/lib/ocaml/3.10/camlimages/images.cmx
+  /usr/lib/ocaml/3.10/camlimages/images.mli
+  /usr/lib/ocaml/3.10/camlimages/images.o
+  /usr/lib/ocaml/3.10/camlimages/index16.cmi
+  /usr/lib/ocaml/3.10/camlimages/index16.cmo
+  /usr/lib/ocaml/3.10/camlimages/index16.cmx
+  /usr/lib/ocaml/3.10/camlimages/index16.mli
+  /usr/lib/ocaml/3.10/camlimages/index16.o
+  /usr/lib/ocaml/3.10/camlimages/index8.cmi
+  /usr/lib/ocaml/3.10/camlimages/index8.cmo
+  /usr/lib/ocaml/3.10/camlimages/index8.cmx
+  /usr/lib/ocaml/3.10/camlimages/index8.mli
+  /usr/lib/ocaml/3.10/camlimages/index8.o
+  /usr/lib/ocaml/3.10/camlimages/info.cmi
+  /usr/lib/ocaml/3.10/camlimages/info.mli
+  /usr/lib/ocaml/3.10/camlimages/jis_table.cmi
+  /usr/lib/ocaml/3.10/camlimages/jis_table.cmo
+  /usr/lib/ocaml/3.10/camlimages/jis_table.cmx
+  /usr/lib/ocaml/3.10/camlimages/jis_table.o
+  /usr/lib/ocaml/3.10/camlimages/jis_unicode.cmi
+  /usr/lib/ocaml/3.10/camlimages/jis_unicode.cmo
+  /usr/lib/ocaml/3.10/camlimages/jis_unicode.cmx
+  /usr/lib/ocaml/3.10/camlimages/jis_unicode.mli
+  /usr/lib/ocaml/3.10/camlimages/jis_unicode.o
+  /usr/lib/ocaml/3.10/camlimages/jpeg.cmi
+  /usr/lib/ocaml/3.10/camlimages/jpeg.cmo
+  /usr/lib/ocaml/3.10/camlimages/jpeg.cmx
+  /usr/lib/ocaml/3.10/camlimages/jpeg.mli
+  /usr/lib/ocaml/3.10/camlimages/jpeg.o
+  /usr/lib/ocaml/3.10/camlimages/jpegread.o
+  /usr/lib/ocaml/3.10/camlimages/jpegwrite.o
+  /usr/lib/ocaml/3.10/camlimages/libci_freetype.a
+  /usr/lib/ocaml/3.10/camlimages/libci_gif.a
+  /usr/lib/ocaml/3.10/camlimages/libci_jpeg.a
+  /usr/lib/ocaml/3.10/camlimages/libci_png.a
+  /usr/lib/ocaml/3.10/camlimages/libci_tiff.a
+  /usr/lib/ocaml/3.10/camlimages/libci_xpm.a
+  /usr/lib/ocaml/3.10/camlimages/mstring.cmi
+  /usr/lib/ocaml/3.10/camlimages/mstring.cmo
+  /usr/lib/ocaml/3.10/camlimages/mstring.cmx
+  /usr/lib/ocaml/3.10/camlimages/mstring.mli
+  /usr/lib/ocaml/3.10/camlimages/mstring.o
+  /usr/lib/ocaml/3.10/camlimages/oBmp.cmi
+  /usr/lib/ocaml/3.10/camlimages/oBmp.cmo
+  /usr/lib/ocaml/3.10/camlimages/oBmp.cmx
+  /usr/lib/ocaml/3.10/camlimages/oBmp.o
+  /usr/lib/ocaml/3.10/camlimages/oColor.cmi
+  /usr/lib/ocaml/3.10/camlimages/oColor.cmo
+  /usr/lib/ocaml/3.10/camlimages/oColor.cmx
+  /usr/lib/ocaml/3.10/camlimages/oColor.mli
+  /usr/lib/ocaml/3.10/camlimages/oColor.o
+  /usr/lib/ocaml/3.10/camlimages/oFreetype.cmi
+  /usr/lib/ocaml/3.10/camlimages/oFreetype.cmo
+  /usr/lib/ocaml/3.10/camlimages/oFreetype.cmx
+  /usr/lib/ocaml/3.10/camlimages/oFreetype.o
+  /usr/lib/ocaml/3.10/camlimages/oGif.cmi
+  /usr/lib/ocaml/3.10/camlimages/oGif.cmo
+  /usr/lib/ocaml/3.10/camlimages/oGif.cmx
+  /usr/lib/ocaml/3.10/camlimages/oGif.o
+  /usr/lib/ocaml/3.10/camlimages/oGraphic.cmi
+  /usr/lib/ocaml/3.10/camlimages/oGraphic.cmo
+  /usr/lib/ocaml/3.10/camlimages/oGraphic.cmx
+  /usr/lib/ocaml/3.10/camlimages/oGraphic.o
+  /usr/lib/ocaml/3.10/camlimages/oImage.cmi
+  /usr/lib/ocaml/3.10/camlimages/oImage.cmx
+  /usr/lib/ocaml/3.10/camlimages/oImage.mli
+  /usr/lib/ocaml/3.10/camlimages/oImage.o
+  /usr/lib/ocaml/3.10/camlimages/oImages.cmi
+  /usr/lib/ocaml/3.10/camlimages/oImages.cmo
+  /usr/lib/ocaml/3.10/camlimages/oImages.cmx
+  /usr/lib/ocaml/3.10/camlimages/oImages.mli
+  /usr/lib/ocaml/3.10/camlimages/oImages.o
+  /usr/lib/ocaml/3.10/camlimages/oJpeg.cmi
+  /usr/lib/ocaml/3.10/camlimages/oJpeg.cmo
+  /usr/lib/ocaml/3.10/camlimages/oJpeg.cmx
+  /usr/lib/ocaml/3.10/camlimages/oJpeg.o
+  /usr/lib/ocaml/3.10/camlimages/oPng.cmi
+  /usr/lib/ocaml/3.10/camlimages/oPng.cmo
+  /usr/lib/ocaml/3.10/camlimages/oPng.cmx
+  /usr/lib/ocaml/3.10/camlimages/oPng.o
+  /usr/lib/ocaml/3.10/camlimages/oPpm.cmi
+  /usr/lib/ocaml/3.10/camlimages/oPpm.cmo
+  /usr/lib/ocaml/3.10/camlimages/oPpm.cmx
+  /usr/lib/ocaml/3.10/camlimages/oPpm.o
+  /usr/lib/ocaml/3.10/camlimages/oPs.cmi
+  /usr/lib/ocaml/3.10/camlimages/oPs.cmo
+  /usr/lib/ocaml/3.10/camlimages/oPs.cmx
+  /usr/lib/ocaml/3.10/camlimages/oPs.o
+  /usr/lib/ocaml/3.10/camlimages/oTiff.cmi
+  /usr/lib/ocaml/3.10/camlimages/oTiff.cmo
+  /usr/lib/ocaml/3.10/camlimages/oTiff.cmx
+  /usr/lib/ocaml/3.10/camlimages/oTiff.o
+  /usr/lib/ocaml/3.10/camlimages/oXimage2.cmi
+  /usr/lib/ocaml/3.10/camlimages/oXimage2.cmo
+  /usr/lib/ocaml/3.10/camlimages/oXimage2.cmx
+  /usr/lib/ocaml/3.10/camlimages/oXimage2.mli
+  /usr/lib/ocaml/3.10/camlimages/oXimage2.o
+  /usr/lib/ocaml/3.10/camlimages/oXpm.cmi
+  /usr/lib/ocaml/3.10/camlimages/oXpm.cmo
+  /usr/lib/ocaml/3.10/camlimages/oXpm.cmx
+  /usr/lib/ocaml/3.10/camlimages/oXpm.o
+  /usr/lib/ocaml/3.10/camlimages/oXvthumb.cmi
+  /usr/lib/ocaml/3.10/camlimages/oXvthumb.cmo
+  /usr/lib/ocaml/3.10/camlimages/oXvthumb.cmx
+  /usr/lib/ocaml/3.10/camlimages/oXvthumb.mli
+  /usr/lib/ocaml/3.10/camlimages/oXvthumb.o
+  /usr/lib/ocaml/3.10/camlimages/png.cmi
+  /usr/lib/ocaml/3.10/camlimages/png.cmo
+  /usr/lib/ocaml/3.10/camlimages/png.cmx
+  /usr/lib/ocaml/3.10/camlimages/png.mli
+  /usr/lib/ocaml/3.10/camlimages/png.o
+  /usr/lib/ocaml/3.10/camlimages/pngread.o
+  /usr/lib/ocaml/3.10/camlimages/pngwrite.o
+  /usr/lib/ocaml/3.10/camlimages/ppm.cmi
+  /usr/lib/ocaml/3.10/camlimages/ppm.cmo
+  /usr/lib/ocaml/3.10/camlimages/ppm.cmx
+  /usr/lib/ocaml/3.10/camlimages/ppm.mli
+  /usr/lib/ocaml/3.10/camlimages/ppm.o
+  /usr/lib/ocaml/3.10/camlimages/ps.cmi
+  /usr/lib/ocaml/3.10/camlimages/ps.cmo
+  /usr/lib/ocaml/3.10/camlimages/ps.cmx
+  /usr/lib/ocaml/3.10/camlimages/ps.mli
+  /usr/lib/ocaml/3.10/camlimages/ps.o
+  /usr/lib/ocaml/3.10/camlimages/reduce.cmi
+  /usr/lib/ocaml/3.10/camlimages/reduce.cmo
+  /usr/lib/ocaml/3.10/camlimages/reduce.cmx
+  /usr/lib/ocaml/3.10/camlimages/reduce.mli
+  /usr/lib/ocaml/3.10/camlimages/reduce.o
+  /usr/lib/ocaml/3.10/camlimages/region.cmi
+  /usr/lib/ocaml/3.10/camlimages/region.cmo
+  /usr/lib/ocaml/3.10/camlimages/region.cmx
+  /usr/lib/ocaml/3.10/camlimages/region.mli
+  /usr/lib/ocaml/3.10/camlimages/region.o
+  /usr/lib/ocaml/3.10/camlimages/rgb24.cmi
+  /usr/lib/ocaml/3.10/camlimages/rgb24.cmo
+  /usr/lib/ocaml/3.10/camlimages/rgb24.cmx
+  /usr/lib/ocaml/3.10/camlimages/rgb24.mli
+  /usr/lib/ocaml/3.10/camlimages/rgb24.o
+  /usr/lib/ocaml/3.10/camlimages/rgba32.cmi
+  /usr/lib/ocaml/3.10/camlimages/rgba32.cmo
+  /usr/lib/ocaml/3.10/camlimages/rgba32.cmx
+  /usr/lib/ocaml/3.10/camlimages/rgba32.mli
+  /usr/lib/ocaml/3.10/camlimages/rgba32.o
+  /usr/lib/ocaml/3.10/camlimages/tiff.cmi
+  /usr/lib/ocaml/3.10/camlimages/tiff.cmo
+  /usr/lib/ocaml/3.10/camlimages/tiff.cmx
+  /usr/lib/ocaml/3.10/camlimages/tiff.mli
+  /usr/lib/ocaml/3.10/camlimages/tiff.o
+  /usr/lib/ocaml/3.10/camlimages/tiffread.o
+  /usr/lib/ocaml/3.10/camlimages/tiffwrite.o
+  /usr/lib/ocaml/3.10/camlimages/tmpfile.cmi
+  /usr/lib/ocaml/3.10/camlimages/tmpfile.cmo
+  /usr/lib/ocaml/3.10/camlimages/tmpfile.cmx
+  /usr/lib/ocaml/3.10/camlimages/tmpfile.mli
+  /usr/lib/ocaml/3.10/camlimages/tmpfile.o
+  /usr/lib/ocaml/3.10/camlimages/ximage2.cmi
+  /usr/lib/ocaml/3.10/camlimages/ximage2.cmo
+  /usr/lib/ocaml/3.10/camlimages/ximage2.cmx
+  /usr/lib/ocaml/3.10/camlimages/ximage2.mli
+  /usr/lib/ocaml/3.10/camlimages/ximage2.o
+  /usr/lib/ocaml/3.10/camlimages/xpm.cmi
+  /usr/lib/ocaml/3.10/camlimages/xpm.cmo
+  /usr/lib/ocaml/3.10/camlimages/xpm.cmx
+  /usr/lib/ocaml/3.10/camlimages/xpm.mli
+  /usr/lib/ocaml/3.10/camlimages/xpm.o
+  /usr/lib/ocaml/3.10/camlimages/xpmread.o
+  /usr/lib/ocaml/3.10/camlimages/xpmwrite.o
+  /usr/lib/ocaml/3.10/camlimages/xvthumb.cmi
+  /usr/lib/ocaml/3.10/camlimages/xvthumb.cmo
+  /usr/lib/ocaml/3.10/camlimages/xvthumb.cmx
+  /usr/lib/ocaml/3.10/camlimages/xvthumb.mli
+  /usr/lib/ocaml/3.10/camlimages/xvthumb.o
+  /usr/lib/ocaml/3.10/stublibs/dllci_freetype.so
+  /usr/lib/ocaml/3.10/stublibs/dllci_gif.so
+  /usr/lib/ocaml/3.10/stublibs/dllci_jpeg.so
+  /usr/lib/ocaml/3.10/stublibs/dllci_png.so
+  /usr/lib/ocaml/3.10/stublibs/dllci_tiff.so
+  /usr/lib/ocaml/3.10/stublibs/dllci_xpm.so
+  /usr/share/doc/ocaml-camlimages-2.2.0/ANNOUNCE
+  /usr/share/doc/ocaml-camlimages-2.2.0/Changes
+  /usr/share/doc/ocaml-camlimages-2.2.0/INSTALL
+  /usr/share/doc/ocaml-camlimages-2.2.0/LICENSE
+  /usr/share/doc/ocaml-camlimages-2.2.0/README
+
+------------------
+
+Port Notes:
+
+----- version 2.2.0-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
