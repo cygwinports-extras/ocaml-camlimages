@@ -1,5 +1,5 @@
 category: Graphics OCaml
-requires: libXpm4 libfreetype26 libgif4 libjpeg62 libpng12 libtiff5 ocaml ocaml-lablgl ocaml-lablgtk2
+requires: libfreetype6 libgif4 libjpeg7 libpng12 libtiff5 libXpm4 ocaml
 sdesc: "OCaml image processing libraries"
 ldesc: "CamlImages is an image processing library for OCaml, which provides:
 

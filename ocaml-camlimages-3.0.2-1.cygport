@@ -4,25 +4,22 @@ inherit ocaml
 DESCRIPTION="OCaml image processing library"
 HOMEPAGE="http://pauillac.inria.fr/camlimages/"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/${ORIG_PN}-${PV}.tgz"
-SRC_DIR="${ORIG_PN}-${PV_MAJ_MIN}"
+
+DISTCLEANFILES="Makefile */Makefile */*/Makefile config.h config.status"
+DIFF_EXCLUDES=".depend"
 
 src_compile() {
-	cd ${S}
-	NO_AUTOHEADER=1
-	cygautoreconf
 	lndirs
-
 	cd ${B}
-	cygconf
-	cygmake -j1
+	cygconf --without-ocamlfind
+	cygmake -j1 am__aclocal_m4_deps=
 }
 
 src_install() {
 	cd ${B}
 	cyginstall \
-		CAMLDIR=${D}${OCAML_LIBDIR} \
-		LIBDIR=${D}${OCAML_LIBDIR}/camlimages
+		am__aclocal_m4_deps= \
 
-	dodir ${OCAML_STUBDIR}
-	mv ${D}${OCAML_LIBDIR}/camlimages/dll*.so ${D}${OCAML_STUBDIR}
+#		CAMLDIR=${D}${OCAML_LIBDIR} \
+#		LIBDIR=${D}${OCAML_LIBDIR}/camlimages
 }
