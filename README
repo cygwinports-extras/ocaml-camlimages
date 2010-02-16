@@ -20,6 +20,7 @@ Runtime requirements:
   libtiff5-3.9.2-1
   libXpm4-3.5.8-1
   ocaml-3.11.2-1
+  ocaml-lablgtk2-2.14.0-2
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -28,7 +29,6 @@ Build requirements:
   flexdll-0.20-1
   gcc4-core-4.3.4-3
   make-3.81-2
-  ocaml-lablgtk2-2.14.0-2
 
 Canonical website:
   http://pauillac.inria.fr/camlimages/
