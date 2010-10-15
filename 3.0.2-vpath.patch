@@ -1,0 +1,33 @@
+--- origsrc/camlimages-3.0.2/Makefile.rules	2009-10-26 07:42:04.000000000 -0500
++++ src/camlimages-3.0.2/Makefile.rules	2010-09-15 17:05:37.002780800 -0500
+@@ -29,7 +29,7 @@ SUFFIXES = .ml .mli .cmo .cmi .cmx .c .o
+ 	$(OCAMLC) -ccopt "-o $@ $(CFLAGS) $(AM_CFLAGS)" -c $< 
+ 
+ # moving to $(srcdir) is needed in case of VPATH build
+-.depend: $(OCAMLSOURCES) $(OCAMLINTERFACES) $(top_srcdir)/config.status
++.depend: $(OCAMLSOURCES) $(OCAMLINTERFACES) $(top_builddir)/config.status
+ 	(cd $(srcdir) && $(OCAMLDEP) $(OCAMLSOURCES) $(OCAMLINTERFACES)) > .depend 
+ 
+ # ugly stuff for make time include
+--- origsrc/camlimages-3.0.2/doc/Makefile.am	2009-10-26 07:42:04.000000000 -0500
++++ src/camlimages-3.0.2/doc/Makefile.am	2010-10-15 13:35:05.045774600 -0500
+@@ -28,7 +28,7 @@ EXTRA_DIST = eng.html.in \
+ 	     ttfimg-icon.jpg \
+ 	     ttfimg.jpg
+ 
+-eng.html: $(top_srcdir)/config.status eng.html.in
++eng.html: $(top_builddir)/config.status eng.html.in
+ 	rm -f eng.html eng.html.tmp
+ 	sed \
+ 		-e 's,@VERSION\@,$(VERSION),g' \
+--- origsrc/camlimages-3.0.2/src/Makefile.am	2009-10-26 07:42:03.000000000 -0500
++++ src/camlimages-3.0.2/src/Makefile.am	2010-09-15 17:03:37.541344300 -0500
+@@ -251,7 +251,7 @@ camlimages_core.cmxa: $(OCAMLOPTOBJS_COR
+ camlimages.cmxa: $(OCAMLOPTOBJS) camlimages.a dllcamlimages.so
+ 	$(OCAMLMKLIB) -linkall -o camlimages $(EXTCLIB) $(LDFLAGS) $(OCAMLOPTOBJS)
+ 
+-camlimages.ml: $(top_srcdir)/config.status camlimages.ml.in
++camlimages.ml: $(top_builddir)/config.status camlimages.ml.in
+ 	rm -f camlimages.ml camlimages.ml.tmp
+ 	sed \
+ 		-e 's,@VERSION\@,$(VERSION),g' \

@@ -1,0 +1,12 @@
+This macro is removed in ocaml-autoconf-1.1.
+
+--- origsrc/camlimages-3.0.2/configure.ac	2009-10-26 07:42:04.000000000 -0500
++++ src/camlimages-3.0.2/configure.ac	2010-09-15 17:16:13.140418800 -0500
+@@ -5,7 +5,6 @@ AM_INIT_AUTOMAKE([foreign])
+ 
+ # Check ocaml
+ AC_PROG_OCAML([3.08])
+-AC_PROG_OCAML_TOOL(OCAMLMKLIB, ocamlmklib)
+ AC_SUBST(OCAMLLIB)
+ 
+ # Check versions to build

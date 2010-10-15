@@ -5,11 +5,18 @@ DESCRIPTION="OCaml image processing library"
 HOMEPAGE="http://pauillac.inria.fr/camlimages/"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/caml-light/bazar-ocaml/${ORIG_PN}-${PV}.tgz"
 
+PATCH_URI="
+	3.0.2-ocaml-autoconf.patch
+	3.0.2-vpath.patch
+"
+
 DISTCLEANFILES="Makefile */Makefile */*/Makefile config.h config.status"
 DIFF_EXCLUDES=".depend"
 
 src_compile() {
 	lndirs
+	cd ${S}
+	cygautoreconf
 	cd ${B}
 	cygconf --without-ocamlfind
 	cygmake -j1 am__aclocal_m4_deps=
