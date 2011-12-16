@@ -1,0 +1,23 @@
+ORIG_PN="camlimages"
+HG_URI="https://bitbucket.org/camlspotter/camlimages"
+HG_TAG="v${PV}"
+inherit ocaml hg
+
+DESCRIPTION="OCaml image processing library"
+HOMEPAGE="http://gallium.inria.fr/camlimages/"
+#SRC_URI="https://bitbucket.org/camlspotter/camlimages/get/v${PV}.tar.gz"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	yes no | omake --install
+	omake
+}
+
+src_install() {
+	cd ${B}
+	dodir ${OCAML_STUBDIR}
+        export OCAMLFIND_DESTDIR="${D}${OCAML_LIBDIR}"
+        export OCAMLFIND_LDCONF=ignore
+	omake install
+}
