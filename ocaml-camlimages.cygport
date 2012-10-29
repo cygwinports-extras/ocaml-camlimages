@@ -1,0 +1,33 @@
+HG_URI="https://bitbucket.org/camlspotter/camlimages"
+HG_TAG="v${PV}"
+inherit ocaml hg
+
+NAME="ocaml-camlimages"
+VERSION=4.0.1
+RELEASE=2
+CATEGORY="OCaml"
+SUMMARY="OCaml image processing library"
+DESCRIPTION="CamlImages is an image processing library for OCaml, which provides:
+* Basic functions for image processing and loading/saving various image
+  file formats (hence providing a translation facility from format to
+  format),
+* An interface with the Caml graphics library allows to display
+  images in the Graphics module screen and to mix them with Caml drawings,
+* A freetype interface, integrated into the library: you can draw texts
+  into images using any truetype fonts."
+HOMEPAGE="http://gallium.inria.fr/camlimages/"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	yes no | omake --install
+	omake
+}
+
+src_install() {
+	cd ${B}
+	dodir ${OCAML_STUBDIR}
+        export OCAMLFIND_DESTDIR="${D}${OCAML_LIBDIR}"
+        export OCAMLFIND_LDCONF=ignore
+	omake install
+}
