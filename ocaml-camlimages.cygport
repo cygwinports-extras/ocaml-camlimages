@@ -3,8 +3,8 @@ HG_TAG="v${PV}"
 inherit ocaml hg
 
 NAME="ocaml-camlimages"
-VERSION=4.0.1
-RELEASE=2
+VERSION=4.1.0
+RELEASE=1
 CATEGORY="OCaml"
 SUMMARY="OCaml image processing library"
 DESCRIPTION="CamlImages is an image processing library for OCaml, which provides:
@@ -16,6 +16,8 @@ DESCRIPTION="CamlImages is an image processing library for OCaml, which provides
 * A freetype interface, integrated into the library: you can draw texts
   into images using any truetype fonts."
 HOMEPAGE="http://gallium.inria.fr/camlimages/"
+
+PATCH_URI="4.1.0-omake.patch"
 
 src_compile() {
 	lndirs
@@ -30,4 +32,6 @@ src_install() {
         export OCAMLFIND_DESTDIR="${D}${OCAML_LIBDIR}"
         export OCAMLFIND_LDCONF=ignore
 	omake install
+
+	dodoc License.txt README.rst
 }

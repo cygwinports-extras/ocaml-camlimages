@@ -1,0 +1,17 @@
+ocamlmklib makes both files simultaneously when flexdll is supported,
+otherwise it only makes lib.a.
+
+--- origsrc/camlimages/OMyMakeroot	2013-10-28 20:19:04.000000000 -0500
++++ src/camlimages/OMyMakeroot	2013-10-28 20:23:01.034208900 -0500
+@@ -134,9 +134,9 @@ open $(module)
+ # of course it only works with unix
+ OCamlMkLibC(name, files, ldflags) =
+   protected.COBJS=$(addsuffix .o, $(files))
+-  dll$(name).so lib$(name).a: $(COBJS)
++  lib$(name).a: $(COBJS)
+     $(OCAMLMKLIB) -o $(name) $(LDFLAGS) $(ldflags) $(COBJS)
+-  return $(array dll$(name).so, lib$(name).a)
++  return $(array lib$(name).a)
+ 
+ # If ocamlmklib does not work for you, you can do:
+ # 1. Put -verbose switch to the above call of $(OCAMLMKLIB) and see the command.
