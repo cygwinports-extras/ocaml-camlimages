@@ -5,7 +5,7 @@ inherit ocaml hg
 NAME="ocaml-camlimages"
 VERSION=4.1.0
 RELEASE=1
-CATEGORY="OCaml"
+CATEGORY="Libs"
 SUMMARY="OCaml image processing library"
 DESCRIPTION="CamlImages is an image processing library for OCaml, which provides:
 * Basic functions for image processing and loading/saving various image
