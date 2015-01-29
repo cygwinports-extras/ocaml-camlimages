@@ -1,9 +1,7 @@
-HG_URI="https://bitbucket.org/camlspotter/camlimages"
-HG_TAG="v${PV}"
-inherit ocaml hg
+inherit ocaml
 
 NAME="ocaml-camlimages"
-VERSION=4.2.0
+VERSION=4.1.2
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="OCaml image processing library"
@@ -16,6 +14,9 @@ DESCRIPTION="CamlImages is an image processing library for OCaml, which provides
 * A freetype interface, integrated into the library: you can draw texts
   into images using any truetype fonts."
 HOMEPAGE="http://gallium.inria.fr/camlimages/"
+SRC_URI="https://bitbucket.org/camlspotter/camlimages/get/${VERSION}.tar.bz2#/camlimages-${VERSION}.tar.bz2"
+commit=e70559bc4fcc
+SRC_DIR="camlspotter-camlimages-${commit}"
 
 PATCH_URI="4.1.0-omake.patch"
 
